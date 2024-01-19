@@ -1,9 +1,11 @@
 let noButtonEnabled = true;
 
 function changeGif(gifName) {
-    document.getElementById('gif').src = gifName;
-    noButtonEnabled = false;
+    if (noButtonEnabled) {
+        document.getElementById('gif').src = gifName;
+    }
 }
+
 
 function changeButtonPosition() {
     if (noButtonEnabled) {
@@ -32,4 +34,11 @@ function changeButtonPosition() {
 function resetGif() {
     noButtonEnabled = true;
     document.getElementById('gif').src = 'merakli.gif';
+}
+
+function sayHastaLaVista() {
+    var h1Elementi = document.getElementById("baslik");
+            var yeniMetin = "Hasta la vista Baby !!!";
+            h1Elementi.innerHTML = yeniMetin;
+            document.getElementById('gif').src = 'son.gif';
 }
