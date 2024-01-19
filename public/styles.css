@@ -1,21 +1,21 @@
-/* public/styles.css */
-
 body {
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  
-  .container {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.center {
     text-align: center;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-  }
-  
+}
+
+#gif {
+    width: 300px;
+    height: 300px;
+}
+
+#buttons {
+    margin-top: 20px;
+}

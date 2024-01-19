@@ -1,19 +1,20 @@
-<!-- public/index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yes/No Buttons</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Date Proposal</title>
 </head>
 <body>
-  <div class="container">
-    <button id="yesButton">Yes</button>
-    <button id="noButton" onmouseover="changePosition()">No</button>
-  </div>
-
-  <script src="script.js"></script>
+    <div class="center">
+        <h1>Will you go out with me?</h1>
+        <img id="gif" src="merakli.gif" alt="Meraklı Gif" width="300" height="300">
+        <div id="buttons">
+            <button id="yesButton" onclick="changeGif('mutlu.gif')">Yes</button>
+            <button id="noButton" onmouseover="changeButtonPosition()">No</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

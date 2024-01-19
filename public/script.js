@@ -1,19 +1,35 @@
-// public/script.js
+let noButtonEnabled = true;
 
-function changePosition() {
-    const noButton = document.getElementById('noButton');
-    const container = document.querySelector('.container');
-  
-    // Yeni rastgele pozisyonlar oluştur
-    const newX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
-    const newY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
-  
-    // Yeni pozisyonu ayarla
-    noButton.style.position = 'absolute';
-    noButton.style.left = `${newX}px`;
-    noButton.style.top = `${newY}px`;
-  
-    // Yeni pozisyonun container içinde olmasını sağla
-    container.appendChild(noButton);
-  }
-  
+function changeGif(gifName) {
+    document.getElementById('gif').src = gifName;
+    noButtonEnabled = false;
+}
+
+function changeButtonPosition() {
+    if (noButtonEnabled) {
+        const noButton = document.getElementById('noButton');
+        const maxX = window.innerWidth - noButton.offsetWidth;
+        const maxY = window.innerHeight - noButton.offsetHeight;
+
+        const newX = Math.random() * maxX;
+        const newY = Math.random() * maxY;
+
+        noButton.style.position = 'absolute';
+        noButton.style.left = newX + 'px';
+        noButton.style.top = newY + 'px';
+
+        // İlk kez gelindiğinde üzgün.gif olarak değiştir
+        noButtonEnabled = false;
+        document.getElementById('gif').src = 'uzgun.gif';
+
+        // Butonun konumunu sürekli değiştirmesi için setTimeout kullanalım
+        setTimeout(() => {
+            noButtonEnabled = true;
+        }, 100);
+    }
+}
+
+function resetGif() {
+    noButtonEnabled = true;
+    document.getElementById('gif').src = 'merakli.gif';
+}
