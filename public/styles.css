@@ -18,4 +18,12 @@ body {
 
 #buttons {
     margin-top: 20px;
+    text-align: center;
+}
+
+
+#yesButton,
+#noButton {
+    width: 60px;
+    height: 40px;
 }
