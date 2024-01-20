@@ -31,3 +31,12 @@ body {
 #baslik {
     font-size: 40px; 
 }
+#yesButton {
+    background-color: pink;
+    color: white;
+}
+
+#noButton {
+    background-color: pink;
+    color: white;
+}
